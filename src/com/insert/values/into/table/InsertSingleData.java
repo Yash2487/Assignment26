@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 import com.connection.ConnectionMain;
 
@@ -36,8 +37,24 @@ public class InsertSingleData {
 		}
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		// take Input From User
+		for (int i = 0; i <= 5; i++) {
+			System.out.println("Enter The First Name>>");
+			Scanner scanner = new Scanner(System.in);
+			String firName = scanner.next();
+			System.out.println("Enter Last Name>>");
+			String lasName = scanner.next();
+			System.out.println("Enter City>>");
+			String city = scanner.next();
+			System.out.println("Enter Mobile Number>>");
+			String mobNum = scanner.next();
+			
+			// createing object of class to access the method
+			InsertSingleData isd = new InsertSingleData();
+			// passing values taken by user to the method
+			isd.insertStudentData(firName, lasName, city, mobNum);
+		}
 
 	}
 
