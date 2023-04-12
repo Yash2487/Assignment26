@@ -27,7 +27,7 @@ public class InsertSingleData {
 			ps.setString(3, city);
 			ps.setString(4, mobNo);
 
-			ResultSet rs = ps.executeQuery();
+			int rs = ps.executeUpdate();
 			System.out.println("Data Inserted Succesfully..." + rs);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -49,7 +49,7 @@ public class InsertSingleData {
 			String city = scanner.next();
 			System.out.println("Enter Mobile Number>>");
 			String mobNum = scanner.next();
-			
+
 			// createing object of class to access the method
 			InsertSingleData isd = new InsertSingleData();
 			// passing values taken by user to the method
