@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 import com.connection.ConnectionMain;
 
-public class InsertSingleData {
+public class InsertMultipleData {
 	PreparedStatement ps = null;
 	Connection connection = null;
 
@@ -50,8 +50,8 @@ public class InsertSingleData {
 			String mobNum = scanner.next();
 
 			// createing object of class to access the method
-			InsertSingleData isd = new InsertSingleData();
-			
+			InsertMultipleData isd = new InsertMultipleData();
+			// passing values taken by user to the method
 			isd.insertStudentData(firName, lasName, city, mobNum);
 		}
 
