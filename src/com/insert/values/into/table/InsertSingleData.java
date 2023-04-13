@@ -51,7 +51,7 @@ public class InsertSingleData {
 
 			// createing object of class to access the method
 			InsertSingleData isd = new InsertSingleData();
-			// passing values taken by user to the method
+			
 			isd.insertStudentData(firName, lasName, city, mobNum);
 		}
 
