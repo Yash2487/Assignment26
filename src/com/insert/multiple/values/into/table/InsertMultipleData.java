@@ -7,13 +7,13 @@ import java.util.Scanner;
 
 import com.connection.ConnectionMain;
 
-public class InsertMultipleData { 
+public class InsertMultipleData {
 	PreparedStatement ps = null;
 	Connection connection = null;
 
 	private void insertStudentData(String fName, String lName, String city, String mobNo) throws SQLException {
 		try {
-			// call connection
+			// call connectionz
 			ConnectionMain connectionMain = new ConnectionMain();
 			connection = connectionMain.getConnection();
 
@@ -50,16 +50,13 @@ public class InsertMultipleData {
 			System.out.println("Enter Mobile Number>>");
 			String mobNum = scanner.next();
 
-<<<<<<< HEAD:src/com/insert/multiple/values/into/table/InsertMultipleData.java
 			// creating object of class to access the method
 			InsertMultipleData isd = new InsertMultipleData();
 			// passing values taken by user to the method
-=======
+
 			// createing object of class to access the method
-			InsertSingleData isd = new InsertSingleData();
-			
->>>>>>> 13244ee86807be754aececc724c85f4047c57e20:src/com/insert/values/into/table/InsertSingleData.java
-			isd.insertStudentData(firName, lasName, city, mobNum);
+			InsertMultipleData iM = new InsertMultipleData();
+			iM.insertStudentData(firName, lasName, city, mobNum);
 		}
 
 	}
