@@ -1,4 +1,4 @@
-package com.insert.values.into.table;
+package com.insert.multiple.values.into.table;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 import com.connection.ConnectionMain;
 
-public class InsertSingleData {
+public class InsertMultipleData { 
 	PreparedStatement ps = null;
 	Connection connection = null;
 
@@ -40,6 +40,7 @@ public class InsertSingleData {
 		// take Input From User
 		for (int i = 0; i <= 5; i++) {
 			System.out.println("Enter The First Name>>");
+			@SuppressWarnings("resource")
 			Scanner scanner = new Scanner(System.in);
 			String firName = scanner.next();
 			System.out.println("Enter Last Name>>");
@@ -49,8 +50,8 @@ public class InsertSingleData {
 			System.out.println("Enter Mobile Number>>");
 			String mobNum = scanner.next();
 
-			// createing object of class to access the method
-			InsertSingleData isd = new InsertSingleData();
+			// creating object of class to access the method
+			InsertMultipleData isd = new InsertMultipleData();
 			// passing values taken by user to the method
 			isd.insertStudentData(firName, lasName, city, mobNum);
 		}
